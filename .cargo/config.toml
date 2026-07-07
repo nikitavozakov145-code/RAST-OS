@@ -1,1 +1,19 @@
+[package]
+name = "rast_os"
+version = "0.1.0"
+edition = "2021"
 
+[dependencies]
+bootloader = "0.11"
+x86_64 = "0.15"
+spin = "0.9"
+volatile = "0.5"
+lazy_static = "1.4"
+pic8259 = "0.10"
+uart_16550 = "0.2"   # для последовательного порта (опционально)
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
